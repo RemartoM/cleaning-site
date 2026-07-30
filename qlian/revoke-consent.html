@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзыв согласия на обработку персональных данных | Спецтехнолоджи</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .revoke-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .revoke-container h1 {
+            color: #00BCD4;
+            margin-bottom: 20px;
+        }
+        .form-field {
+            margin-bottom: 20px;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+        .form-field input, .form-field textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .form-field input:focus, .form-field textarea:focus {
+            outline: none;
+            border-color: #00BCD4;
+        }
+        .alert-success {
+            background: #E8F5E9;
+            color: #2E7D32;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spray-can-sparkles logo-icon"></i>
+                <span>Спец<span class="logo-accent">технолоджи</span></span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="revoke-container">
+                <h1>Отзыв согласия на обработку персональных данных</h1>
+                <p>В соответствии с Федеральным законом №152-ФЗ «О персональных данных», вы имеете право в любой момент отозвать свое согласие на обработку персональных данных.</p>
+                
+                <form id="revoke-form" action="server/revoke_consent.php" method="POST">
+                    <input type="hidden" name="csrf_token" id="csrf_token" value="">
+                    
+                    <div class="form-field">
+                        <label for="fullname">ФИО (как в заявке) *</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="reason">Причина отзыва (необязательно)</label>
+                        <textarea id="reason" name="reason" rows="3" placeholder="Укажите причину, если хотите..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Отозвать согласие</button>
+                </form>
+                
+                <div id="success-message" class="alert-success">
+                    <i class="fas fa-check-circle"></i> 
+                    Ваш запрос на отзыв согласия принят. Данные будут удалены в течение 30 дней.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

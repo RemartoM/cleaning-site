@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Контакты клининговой компании Спецтехнолоджи в Москве. Телефон, WhatsApp, Telegram, адрес офиса. Оставьте заявку на уборку прямо сейчас!">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spectechnology.ru/contact.html">
+    <title>Контакты | Спецтехнолоджи - Клининговая компания в Москве</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="На главную">
+                <i class="fas fa-spray-can-sparkles logo-icon"></i>
+                <span>Спец<span class="logo-accent">Технолоджи</span></span>
+            </a>
+            <nav class="nav" id="nav-menu" aria-label="Основное меню">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="services.html" class="nav-link">Услуги</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="calculator.html" class="nav-link">Калькулятор</a></li>
+                    <li><a href="contact.html" class="nav-link active" aria-current="page">Контакты</a></li>
+                    <li><a href="payment.html" class="nav-link">Оплата</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+79991234567" class="btn btn-phone"><i class="fas fa-phone-alt"></i> +7 (999) 123-45-67</a>
+                <button class="burger-menu" id="burger-btn" aria-label="Открыть меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p class="breadcrumbs"><a href="index.html">Главная</a> / Контакты</p>
+            </div>
+        </section>
+
+        <section class="contact-content container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Свяжитесь с нами</h2>
+                    <p>Оставьте заявку или свяжитесь удобным способом. Мы ответим в течение 15 минут!</p>
+                    
+                    <div class="contact-methods">
+                        <a href="tel:+79991234567" class="contact-method phone-method">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Позвонить</strong>
+                                <span>+7 (999) 123-45-67</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://wa.me/79991234567" target="_blank" rel="noopener noreferrer" class="contact-method wa-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>Написать в WhatsApp</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://t.me/SpecTechnologyBot" target="_blank" rel="noopener noreferrer" class="contact-method tg-method">
+                            <i class="fab fa-telegram-plane"></i>
+                            <div>
+                                <strong>Telegram</strong>
+                                <span>Написать в Telegram</span>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:info@spectechnology.ru" class="contact-method email-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>info@spectechnology.ru</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-method address-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Адрес офиса</strong>
+                                <span>101000, г. Москва, ул. Чистоты, д. 1, офис 305</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method time-method">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Режим работы</strong>
+                                <span>Ежедневно с 8:00 до 22:00</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method requisites-method">
+                            <i class="fas fa-file-alt"></i>
+                            <div>
+                                <strong>Реквизиты</strong>
+                                <span>ООО «Спецтехнолоджи»<br>ИНН: 7700000000<br>ОГРН: 1127700000000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" id="order-form">
+                    <h2>Оставить заявку</h2>
+                    <p>Заполните форму, и мы свяжемся с вами для уточнения деталей</p>
+                    
+                    <form id="contact-form" class="contact-form" action="server/submit_form.php" method="POST" novalidate>
+                        <input type="hidden" name="csrf_token" id="csrf_token_contact" value="">
+                        <input type="hidden" name="form_type" value="Заявка со страницы контактов">
+                        
+                        <div class="form-field">
+                            <label for="contact-name">Ваше имя *</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Иван Иванов" required minlength="2" maxlength="100" autocomplete="name">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="contact-phone">Телефон *</label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder="+7 (999) 123-45-67" required autocomplete="tel">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" placeholder="example@mail.ru" autocomplete="email">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="contact-service">Интересующая услуга</label>
+                            <select id="contact-service" name="service">
+                                <option value="">Выберите услугу</option>
+                                <option value="Уборка квартиры/коттеджа">Уборка квартиры/коттеджа</option>
+                                <option value="Уборка офиса/магазина">Уборка офиса/магазина</option>
+                                <option value="Уборка после ремонта">Уборка после ремонта</option>
+                                <option value="Мойка окон и фасадов">Мойка окон и фасадов</option>
+                                <option value="Химчистка мебели/штор">Химчистка мебели/штор</option>
+                                <option value="Другое">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="contact-message">Комментарий</label>
+                            <textarea id="contact-message" name="message" rows="4" placeholder="Опишите задачу подробнее: площадь, адрес, пожелания..."></textarea>
+                        </div>
+                        
+                        <div class="privacy-check">
+                            <input type="checkbox" id="privacy-contact" name="privacy" required checked>
+                            <label for="privacy-contact">
+                                Я даю согласие на обработку <a href="personal-data-policy.html" target="_blank">персональных данных</a> 
+                                и принимаю <a href="terms-of-use.html" target="_blank">пользовательское соглашение</a>
+                            </label>
+                        </div>
+                        
+                        <p class="age-notice">
+                            <i class="fas fa-info-circle"></i> Нажимая кнопку, вы подтверждаете, что вам исполнилось 18 лет
+                        </p>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section container">
+            <h2 class="section-title">Мы на карте</h2>
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.0!2d37.618423!3d55.75396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a7a6b4d3f%3A0x1f6e1b3c3e5c5b7e!2z0YPQuy4g0KfQuNGB0YLQvtC0!5e0!3m2!1sru!2sru!4v1234567890" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Офис Спецтехнолоджи на карте Москвы"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>Спецтехнолоджи</h4>
+                <p>ООО «Спецтехнолоджи»</p>
+                <p>ИНН: 7700000000 | ОГРН: 1127700000000</p>
+            </div>
+            <div class="footer-col">
+                <h4>Правовая информация</h4>
+                <ul>
+                    <li><a href="personal-data-policy.html">Политика обработки ПД</a></li>
+                    <li><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="terms-of-use.html">Пользовательское соглашение</a></li>
+                    <li><a href="revoke-consent.html">Отзыв согласия на ПД</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 ООО «Спецтехнолоджи». <a href="personal-data-policy.html">Политика обработки ПД</a></p>
+                <p class="footer-disclaimer">Оставляя заявку, вы соглашаетесь на обработку ПД согласно ФЗ-152.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="privacy-modal" class="modal" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Закрыть">&times;</button>
+            <h3>Политика обработки ПД</h3>
+            <p>Подробнее на странице <a href="personal-data-policy.html">Политики обработки персональных данных</a>.</p>
+        </div>
+    </div>
+
+    <div id="age-modal" class="modal">
+        <div class="modal-content age-modal-content">
+            <h3>Подтверждение возраста</h3>
+            <p>Подтвердите, что вам исполнилось 18 лет.</p>
+            <button id="age-confirm" class="btn btn-primary">Мне есть 18 лет</button>
+            <button id="age-deny" class="btn btn-outline-dark">Мне нет 18 лет</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/cookie-consent.js"></script>
+</body>
+</html>

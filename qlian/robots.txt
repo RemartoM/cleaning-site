@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /crm/
+Disallow: /server/
+Disallow: /admin/
+Disallow: /*.php$
+Disallow: /personal-data-policy.html
+
+Sitemap: https://spectechnology.ru/sitemap.xml
+
+Host: spectechnology.ru
