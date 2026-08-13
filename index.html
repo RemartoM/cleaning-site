@@ -66,32 +66,41 @@
 
     <!-- ОСНОВНОЙ КОНТЕНТ -->
     <main>
-        <!-- Герой-блок -->
-        <section class="hero">
-            <div class="container hero-content">
-                <h1>Кристальная чистота<br>вашего пространства</h1>
-                <p class="hero-subtitle">Профессиональная уборка жилых и коммерческих помещений в Москве. Химчистка, мойка фасадов, уборка после ремонта и многое другое с гарантией качества.</p>
-                <div class="hero-buttons">
-                    <a href="calculator.html" class="btn btn-primary"><i class="fas fa-calculator"></i> Рассчитать стоимость</a>
-                    <a href="contact.html" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Оставить заявку</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">7+</span>
-                        <span class="stat-label">лет опыта</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">5000+</span>
-                        <span class="stat-label">выполненных заказов</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">150+</span>
-                        <span class="stat-label">постоянных клиентов</span>
-                    </div>
-                </div>
+        <!-- ГЕРОЙ С ВИДЕОФОНОМ -->
+<section class="hero hero-video">
+    <!-- Видеофон -->
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+        <source src="video/cleaning-bg.mp4" type="video/mp4">
+        <!-- Запасной фон, если видео не загрузится -->
+    </video>
+    
+    <!-- Затемнение для читаемости текста -->
+    <div class="hero-overlay"></div>
+    
+    <!-- Контент героя -->
+    <div class="container hero-content">
+        <h1>Кристальная чистота<br>вашего пространства</h1>
+        <p class="hero-subtitle">Профессиональная уборка жилых и коммерческих помещений. Химчистка, мойка фасадов, уборка после ремонта и многое другое с гарантией качества.</p>
+        <div class="hero-buttons">
+            <a href="calculator.html" class="btn btn-primary"><i class="fas fa-calculator"></i> Рассчитать стоимость</a>
+            <a href="contact.html" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Оставить заявку</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">7+</span>
+                <span class="stat-label">лет опыта</span>
             </div>
-            <div class="hero-overlay"></div>
-        </section>
+            <div class="stat-item">
+                <span class="stat-number">5000+</span>
+                <span class="stat-label">выполненных заказов</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">150+</span>
+                <span class="stat-label">постоянных клиентов</span>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Преимущества -->
         <section class="features container">
