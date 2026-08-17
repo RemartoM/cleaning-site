@@ -662,14 +662,22 @@ section {
 .quick-form input[type="tel"],
 .quick-form input[type="email"],
 .quick-form input[type="number"] {
-    padding: 15px 25px;
+    width: 100%;
+    padding: 14px 20px;
     border: 2px solid transparent;
     border-radius: 50px;
-    flex: 1 1 250px;
     font-family: var(--font);
     font-size: 16px;
     transition: 0.3s;
     outline: none;
+    box-sizing: border-box;
+}
+.quick-form .btn-primary {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .quick-form input:focus {
@@ -1350,107 +1358,50 @@ section {
     width: 100%;
 }
 
-/* ========== АДАПТИВНОСТЬ ========== */
 @media (max-width: 1024px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
+    .nav-list { gap: 15px; }
+    .nav-link { font-size: 13px; }
+    .btn-phone { font-size: 12px; padding: 6px 10px; }
+    .social-icon { width: 30px; height: 30px; font-size: 14px; }
 }
 
 @media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+    }
+    .logo { order: 1; }
+    .burger-menu { display: flex; order: 3; }
     .nav {
         display: none;
+        order: 4;
+        width: 100%;
     }
-    
     .nav.active {
         display: block;
-        position: absolute;
-        top: 80px;
-        left: 0;
         background: white;
-        width: 100%;
         padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
-    
     .nav.active .nav-list {
         flex-direction: column;
         gap: 15px;
-    }
-    
-    .header-actions .btn-phone,
-    .social-links-header {
-        display: none;
-    }
-    
-    .burger-menu {
-        display: flex;
-    }
-    
-    .nav-contact-mobile {
-        display: flex;
-        gap: 10px;
-        margin-top: 20px;
-        flex-wrap: wrap;
-    }
-    
-    .hero h1 {
-        font-size: 32px;
-    }
-    
-    .hero-stats {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-    }
-    
-    .steps {
-        flex-direction: column;
-    }
-    
-    .step-arrow {
-        transform: rotate(90deg);
-    }
-    
-    .service-detail-card {
-        flex-direction: column;
         text-align: center;
     }
-    
-    .service-detail-image {
-        margin: 0 auto;
-    }
-    
-    .features {
-        margin-top: 30px;
-    }
-    
-    .quick-form .form-group {
-        flex-direction: column;
-    }
-}
+    .header-actions { order: 2; }
+    .header-actions .btn-phone,
+    .social-links-header { display: none; }
 
-@media (max-width: 480px) {
-    .hero {
-        min-height: 400px;
-    }
-    
-    .hero h1 {
-        font-size: 28px;
-    }
-    
-    .section-title {
-        font-size: 28px;
-    }
-    
-    .page-header h1 {
-        font-size: 32px;
-    }
+    .hero h1 { font-size: 32px; }
+    .hero-stats { flex-direction: column; gap: 20px; }
+    .hero-buttons { flex-direction: column; }
+
+    .steps { flex-direction: column; }
+    .step-arrow { transform: rotate(90deg); }
+
+    .features { margin-top: 30px; }
+
+    .service-card h3 { font-size: 16px; }
+
+    .quick-form .form-group { padding: 0 15px; }
 }

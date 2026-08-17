@@ -125,7 +125,15 @@
                         
                         <div class="form-field">
                             <label for="contact-phone">Телефон *</label>
-                            <input type="tel" id="contact-phone" name="phone" placeholder="+7 (999) 123-45-67" required autocomplete="tel">
+                            <input type="tel" 
+                                name="phone" 
+                                id="quick-phone"
+                                value="+7" 
+                                required 
+                                pattern="\+7[\s\(]?\d{3}[\)\s]?\d{3}[\s-]?\d{2}[\s-]?\d{2}" 
+                                title="Формат: +7 (999) 123-45-67" 
+                                autocomplete="tel"
+                                maxlength="18">  
                         </div>
                         
                         <div class="form-field">
