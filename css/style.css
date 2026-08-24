@@ -811,6 +811,10 @@ section {
 
 .service-detail-content {
     flex: 1;
+    min-width: 0;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .service-detail-content h2 {
@@ -1359,6 +1363,54 @@ section {
 .input-wrapper input {
     width: 100%;
 }
+/* ========== ИСПРАВЛЕНИЕ ТЕКСТА В УСЛУГАХ ========== */
+.service-detail-content {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.service-detail-content h2 {
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.3;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    margin-bottom: 12px;
+}
+
+.service-detail-content h3 {
+    text-align: left;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
+.service-detail-content ul {
+    text-align: left;
+    padding-left: 0;
+    margin: 0;
+}
+
+.service-detail-content ul li {
+    text-align: left;
+    display: block;
+    padding-left: 22px;
+    position: relative;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    line-height: 1.5;
+}
+
+.service-detail-content ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
 
 @media (max-width: 1024px) {
     .nav-list { gap: 15px; }
@@ -1469,5 +1521,33 @@ section {
 
     .price-note {
         font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .service-detail-card {
+        padding: 20px;
+    }
+
+    .service-detail-content h2 {
+        font-size: 20px;
+    }
+
+    .service-detail-content ul li {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+@media (max-width: 768px) {
+    .service-detail-card {
+        padding: 20px 15px;
+    }
+
+    .service-detail-content h2 {
+        font-size: 20px;
+    }
+
+    .service-detail-content ul li {
+        font-size: 14px;
+        padding-left: 20px;
     }
 }
